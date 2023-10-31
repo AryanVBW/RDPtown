@@ -6,12 +6,26 @@
 
 
 Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) and virtual computer ! 🎉
+These cloud computers are fully managed by Google, so you can be sure they are reliable and secure. You can use them for anything you want, from development and testing to running Linux tools and apps to hacking exploits and Linux gaming.
+Each virtual computer has approximately 400mb/ps internet speed and 4GB of RAM. If you have an old Gmail account, you can get a virtual computer with 16GB of RAM!
 
 ## Features ✨
-- Virtual Computer: ⚡️ 400MB/ps internet speed 🖥️ 4GB RAM (Old Gmail accounts get a whooping 16GB RAM!)
+- Virtual Computer: ⚡️ 400MB/ps internet speed
 - Trustworthy: 🛡️ Hosted and maintained by the  Google
 - Usage: 👨‍💻 Linux tools, apchee/ngnix, ethical security testing, gaming, and more!
+- Free forever
+- Fully managed by Google
+- Reliable and secure
+- 🖥️ 4GB RAM (Old Gmail accounts get a whooping 16GB RAM!)
+- Access from any device with an RDP client
+##Benefits:
 
+- Use Linux tools and apps on any device
+- Develop and test software in a cloud environment
+- Run hacking exploits safely and securely
+- Play Linux games without having to install anything
+- Have your own personal cloud lab
+- 
 ## How to Get FREE RDP🚀
 To use Gmail Cloud Computer, you need to follow these steps:
 ## Step 1
@@ -36,6 +50,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
     
  - Wait for a few minutes while the website sets up your cloud computer. You will see a terminal window when it is ready.
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
+
 
 ## Disclaimer ⚠️
 Please use RDPTown responsibly and abide by Google's terms of service. Any unauthorized or illegal activities are not supported and are solely the user's responsibility.
