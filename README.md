@@ -11,7 +11,13 @@ Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) 
 ## How to Get FREE RDP🚀
 To use Gmail Cloud Computer, you need to follow these steps:
 ## Step 1
- - Go to [this website] and sign in with your Google account.
+ - Download Google Cloud app or Go to [[console.cloud.google.com](https://console.cloud.google.com/)] and sign in with your Google account.
+ <p align="center">
+<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="20">
+<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="20">
+</p>
+
+
  - Choose a Gmail account that you want to use as your cloud computer. You can use any Gmail account, but older accounts have more RAM and storage space.
  ## Step 2
     open gogogle cloud app on your iphone or Android 
