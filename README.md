@@ -20,8 +20,6 @@ To use Gmail Cloud Computer, you need to follow these steps:
 
 <p align="center">
    <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="80" alt="Darkside"></a></p>
-</p>
-<p align="center">
    <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/AppleStore.png" height="250" alt="Darkside"></a></p>
 </p>
 
