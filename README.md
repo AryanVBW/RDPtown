@@ -50,8 +50,9 @@ To use Gmail Cloud Computer, you need to follow these steps:
  📲Click the terminal/shell icon 
 </p>
    
- - Wait for a few minutes while the website sets up your cloud computer. You will see a terminal window when it is ready.
+ - Wait for a few minutes while the Google Cloud sets up your cloud computer. You will see a terminal window when it is ready.
  ## Step THREE
+ <h4>Copy paste the following cammand one by one</h4>
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
 
