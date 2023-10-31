@@ -19,7 +19,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
 
 <p align="center">
    <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/Capture-removebg-preview.png" height="80" alt="Darkside"></a>
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/Capture1-removebg-preview.1.png" height="80" alt="Darkside"></a></p>
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="80" alt="Darkside"></a></p>
 </p>
 
  - Choose a Gmail account that you want to use as your cloud computer. You can use any Gmail account, but older accounts have more RAM and storage space.
