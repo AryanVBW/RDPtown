@@ -17,7 +17,9 @@ Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) 
 To use Gmail Cloud Computer, you need to follow these steps:
 ## Step 1
  - Download Google Cloud app or Go to [shell.cloud.google.com](https://shell.cloud.google.com/) and sign in with your Google account.
-<p palign="center"><a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="40" alt="Darkside"></a>
+
+<p align="center">
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="" alt="Darkside"></a></p>
 </p>
 <p>  <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="60" alt="Darkside"></a></p>
 
