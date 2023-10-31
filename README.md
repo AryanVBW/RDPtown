@@ -53,6 +53,28 @@ To use Gmail Cloud Computer, you need to follow these steps:
  - Wait for a few minutes while the Google Cloud sets up your cloud computer. You will see a terminal window when it is ready.
  ## Step THREE
  <h4>Copy paste the following cammand one by one</h4>
+   1.paste this after complet this paste second 
+   
+   ```bash
+    sudo apt update -y && sudo apt upgrade -y
+    sudo apt install wget -y
+   ```
+
+  2.Download and install Chrome Remote Desktop 
+
+   ```bash
+    sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+    sudo apt install ./chrome-remote-desktop_current_amd64.deb
+   ```
+  
+   3. installing XFCE Desktop Environment
+  
+     
+    sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
+     
+
+ 
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
 
