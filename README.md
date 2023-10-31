@@ -6,7 +6,7 @@
 
 
 Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) and virtual computer ! 🎉
-These cloud computers are fully managed by Google, so you can be sure they are reliable and secure. You can use them for anything you want, from development and testing to running Linux tools,apps and games.
+These cloud computers are fully managed by Google, so you can be sure they are reliable and secure. You can use them for anything you want.
 
 ## Features ✨
 - Virtual Computer: ⚡️ 400MB/ps internet speed
