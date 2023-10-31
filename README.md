@@ -5,8 +5,8 @@ Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) 
 
 ## Features ✨
 - Virtual Computer: ⚡️ 400MB/ps internet speed 🖥️ 4GB RAM (Old Gmail accounts get a whooping 16GB RAM!)
-- Trustworthy: 🛡️ Hosted and maintained by the mighty Google
-- Usage: 👨‍💻 Linux tools, hacking exploits, ethical security testing, gaming, and more!
+- Trustworthy: 🛡️ Hosted and maintained by the  Google
+- Usage: 👨‍💻 Linux tools, apchee/ngnix, ethical security testing, gaming, and more!
 
 ## How to Access 🚪
 1. Sign in using your Google account.
