@@ -45,7 +45,11 @@ To use Gmail Cloud Computer, you need to follow these steps:
  - Choose a Gmail account that you want to use as your cloud computer. You can use any Gmail account, but older accounts have more RAM and storage space.
  ## Step TWO
   <h4>Open gogogle cloud app on your iphone or Android<h4> 
-    
+   <p align="center">
+<img src=" https://github.com/AryanVBW/RDPtown/releases/download/V1/RDPAndro.png" height=""><br>
+ 📲Click the terminal/shell icon 
+</p>
+   
  - Wait for a few minutes while the website sets up your cloud computer. You will see a terminal window when it is ready.
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
