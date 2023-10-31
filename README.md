@@ -1,7 +1,7 @@
 # RDPtown
 # 🌟 Free Cloud Linxie RDP Repository 🚀
 
-Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) and virtual computer on Google Cloud! 🎉
+Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) and virtual computer ! 🎉
 
 ## Features ✨
 - Virtual Computer: ⚡️ 400MB/ps internet speed 🖥️ 4GB RAM (Old Gmail accounts get a whooping 16GB RAM!)
