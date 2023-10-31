@@ -18,7 +18,7 @@ Each virtual computer has approximately 400mb/ps internet speed and 4GB of RAM. 
 - Reliable and secure
 - 🖥️ 4GB RAM (Old Gmail accounts get a whooping 16GB RAM!)
 - Access from any device with an RDP client
-##Benefits:
+## Benefits:
 
 - Use Linux tools and apps on any device
 - Develop and test software in a cloud environment
