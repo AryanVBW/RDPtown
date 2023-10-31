@@ -13,8 +13,8 @@ To use Gmail Cloud Computer, you need to follow these steps:
 ## Step 1
  - Download Google Cloud app or Go to [console.cloud.google.com](https://console.cloud.google.com/) and sign in with your Google account.
  <p align="center">
-<img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/AppleStore.png" height="150">
-<img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/GooglePlayStore.png" height="150">
+<img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/AppleStore.png" height="100">
+<img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/GooglePlayStore.png" height="100">
 </p>
 
 
