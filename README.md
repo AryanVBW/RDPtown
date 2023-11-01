@@ -62,7 +62,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
 
    ```bash
     sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-    sudo apt install ./chrome-remote-desktop_current_amd64.deb
+    sudo apt install ./chrome-remote-desktop_current_amd64.deb -y 
    ```
 3. installing XFCE Desktop Environment
    ```bash
