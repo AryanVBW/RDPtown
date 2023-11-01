@@ -105,13 +105,9 @@ To use Gmail Cloud Computer, you need to follow these steps:
 
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark2.png" height="210">
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark3.png" height="210">
-
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark4.png" height="210">
-
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark5.png" height="210">
-
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark6.png" height="210">
-
 </div>
 
 
