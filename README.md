@@ -30,13 +30,13 @@ To use Gmail Cloud Computer, you need to follow these steps:
 
 <p align="center">
    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole">
-      <img src="https://github.com/AryanVbW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Darkside">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/google-play-badge.png" height="100" alt="Darkside">
    </a>
 </p>
 
 <p align="center">
    <a href="https://apps.apple.com/us/app/google-cloud/id1005120814">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="90" alt="Darkside">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/apple-store-badge.png" height="90" alt="Darkside">
    </a>
 </p>
 
