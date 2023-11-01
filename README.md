@@ -49,6 +49,13 @@ To use Gmail Cloud Computer, you need to follow these steps:
  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="200">
     📲Click the terminal/shell icon 
 </p>
+
+<div style="text-align: center;">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="200">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="200">
+  <p style="text-align: center;">📲Click the terminal/shell icon</p>
+</div>
+
    
  - Wait for a few minutes while the Google Cloud sets up your cloud computer. You will see a terminal window when it is ready.
 <h1>Step THREE</h1>
