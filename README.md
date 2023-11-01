@@ -45,7 +45,8 @@ To use Gmail Cloud Computer, you need to follow these steps:
 <h1>Step TWO</h1>
 <h4>Open gogogle cloud app on your iphone or Android<h4> 
    <p align="center">
-<img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/dark1.png" height="">
+<img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/dark1.png" height="100
+ ">
 📲Click the terminal/shell icon 
 </p>
    
