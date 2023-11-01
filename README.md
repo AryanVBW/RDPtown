@@ -101,12 +101,12 @@ To use Gmail Cloud Computer, you need to follow these steps:
 </p>
  <h2>Open  Chrome Remote Desktop App/Extension  </h2>  
  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark1.png" height="220">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark2.png" height="220">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark3.png" height="220">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark4.png" height="220">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark5.png" height="220">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark6.png" height="220">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark1.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark2.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark3.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark4.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark5.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark6.png" height="210">
 </div>
 
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
