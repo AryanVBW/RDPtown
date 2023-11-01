@@ -83,17 +83,22 @@ To use Gmail Cloud Computer, you need to follow these steps:
    ```
 <h1>Step Four</h1> 
    - Download Chrome Remote Desktop app/Extensions or Go to <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> 
- <p align="center">
-   <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/google-play-badgeO.png" height="40" alt="Darkside">
-   </a>
-  </p>
-   <p align="center">
-   <a href="https://apps.apple.com/us/app/google-cloud/id1005120814">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/appstoreO.png" height="40" alt="Darkside">
+<p align="center">
+   <a href="https://play.google.com/store/apps/details?id=com.google.chromeremotedesktop">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Darkside">
    </a>
 </p>
 
+<p align="center">
+   <a href="https://apps.apple.com/us/app/chrome-remote-desktop/id944025852">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="90" alt="Darkside">
+   </a>
+</p>
+<p align="center">
+   <a href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/mediumCrome-withouborder.png" height="60" alt="Darkside">
+   </a>
+</p>
    
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
