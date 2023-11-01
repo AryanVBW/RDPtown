@@ -25,7 +25,7 @@ These cloud computers are fully managed by Google, so you can be sure they are r
 - Have your own personal cloud lab
 ## How to Get FREE RDP🚀
 To use Gmail Cloud Computer, you need to follow these steps:
-<h1>Step ONE</h1>
+<h2>Step ONE</h2>
  - Download Google Cloud app or Go to <a href="https://shell.cloud.google.com">shell.cloud.google.com</a> and sign in with your Google account.
 
 <p align="center">
@@ -81,8 +81,8 @@ To use Gmail Cloud Computer, you need to follow these steps:
    ```bash  
     sudo systemctl disable lightdm.service
    ```
-<h1>Step Four</h1> 
-   - Download Chrome Remote Desktop app/Extensions or Go to <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> 
+<h1>Step FOUR</h1> 
+   - Download Chrome Remote Desktop app/Extension or Go to <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> 
 <p align="center">
    <a href="https://play.google.com/store/apps/details?id=com.google.chromeremotedesktop">
       <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Darkside">
@@ -99,7 +99,16 @@ To use Gmail Cloud Computer, you need to follow these steps:
       <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/mediumCrome-withouborder.png" height="60" alt="Darkside">
    </a>
 </p>
-   
+ <h2>Open  Chrome Remote Desktop App/Extension  </h2>  
+ <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="210">
+</div>
+
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
 
