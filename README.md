@@ -26,7 +26,7 @@ These cloud computers are fully managed by Google, so you can be sure they are r
 ## How to Get FREE RDP🚀
 To use Gmail Cloud Computer, you need to follow these steps:
 <h1>Step ONE</h1>
- - Download Google Cloud app or Go to [shell.cloud.google.com](https://shell.cloud.google.com/) and sign in with your Google account.
+ - Download Google Cloud app or Go to <a href="https://shell.cloud.google.com">shell.cloud.google.com</a> and sign in with your Google account.
 
 <p align="center">
    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole">
@@ -86,3 +86,6 @@ To use Gmail Cloud Computer, you need to follow these steps:
 Please use RDPTown responsibly and abide by Google's terms of service. Any unauthorized or illegal activities are not supported and are solely the user's responsibility.
 
 Join in, contribute, raise issues, and let's make Linxie even better! 🚧✨
+<p align="center">Made 🕸️ By <a href="https://aryanvbw.github.io/">*Vivek W*</a></p>
+<p align="center" style="font-size: 8px">v1.0</p>
+
