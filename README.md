@@ -66,11 +66,10 @@ To use Gmail Cloud Computer, you need to follow these steps:
     sudo apt install ./chrome-remote-desktop_current_amd64.deb
    ```
 3. installing XFCE Desktop Environment
-  
-     
-    sudo DEBIAN_FRONTEND=noninteractive \
+   ```bash
+   sudo DEBIAN_FRONTEND=noninteractive \
     apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
-     
+   ```  
 4. Activating Chrome Remote Desktop
    ```bash
     sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
