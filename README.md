@@ -90,7 +90,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
   </p>
    <p align="center">
    <a href="https://apps.apple.com/us/app/google-cloud/id1005120814">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/google-play-badgeO.png" height="40" alt="Darkside">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/google-play-badgeO.svg" height="40" alt="Darkside">
    </a>
 </p>
 
