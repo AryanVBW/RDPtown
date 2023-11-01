@@ -25,7 +25,7 @@ These cloud computers are fully managed by Google, so you can be sure they are r
 - Have your own personal cloud lab
 ## How to Get FREE RDP🚀
 To use Gmail Cloud Computer, you need to follow these steps:
-## Step ONE
+<h1>Step ONE</h1>
  - Download Google Cloud app or Go to [shell.cloud.google.com](https://shell.cloud.google.com/) and sign in with your Google account.
 
 <p align="center">
@@ -50,7 +50,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
 </p>
    
  - Wait for a few minutes while the Google Cloud sets up your cloud computer. You will see a terminal window when it is ready.
- ## Step THREE
+<h1>Step THREE</h1>
  <h4>Copy paste the following cammand one by one</h4>
 1.paste this after complet this paste second 
    
@@ -77,7 +77,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
    ```bash  
     sudo systemctl disable lightdm.service
    ```
-## Step Four 
+<h1>Step Four</h1> 
   
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
