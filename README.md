@@ -99,7 +99,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
       <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/mediumCrome-withouborder.png" height="60" alt="Darkside">
    </a>
 </p>
- <h2>Open  Chrome Remote Desktop App/Extension  </h2>  
+ <h2>Open  Chrome Remote Desktop App/Extension and follow the steps  </h2>  
  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark1.png" height="210">
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark2.png" height="210">
