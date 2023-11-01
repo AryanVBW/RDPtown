@@ -75,9 +75,12 @@ To use Gmail Cloud Computer, you need to follow these steps:
      
   4. Activating Chrome Remote Desktop
    ```bash
-     sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+    sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
    ```
-   5. 
+  5.  Disabling lightdm.service
+   ```bash  
+    sudo systemctl disable lightdm.service
+   ```
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
 
