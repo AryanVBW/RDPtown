@@ -48,7 +48,7 @@ To use Gmail Cloud Computer, you need to follow these steps:
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="200">
   <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="200">
-  <img src=" https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="200">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="200">
   <p style="text-align: center;">📲Click the terminal/shell icon</p>
 </div>
 
