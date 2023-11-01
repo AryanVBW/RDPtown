@@ -85,10 +85,10 @@ To use Gmail Cloud Computer, you need to follow these steps:
    - Download Chrome Remote Desktop app/Extensions or Go to <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> 
  <p align="center">
    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Darkside">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="30" alt="Darkside">
    </a>
    <a href="https://apps.apple.com/us/app/google-cloud/id1005120814">
-      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="90" alt="Darkside">
+      <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="45" alt="Darkside">
    </a>
 </p>
 
