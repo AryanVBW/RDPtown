@@ -81,6 +81,8 @@ To use Gmail Cloud Computer, you need to follow these steps:
    ```bash  
     sudo systemctl disable lightdm.service
    ```
+  ## Step Four 
+  
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
 
