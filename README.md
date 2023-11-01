@@ -1,7 +1,7 @@
 # RDPtown
 <p align="center">
 <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/rdp2-removebg-preview.png" height=""><br>
-🌟 Free Cloud Linxie RDP Repository 🚀
+🌟 Free Cloud Linxie RDP🚀
 </p>
 
 
@@ -53,35 +53,33 @@ To use Gmail Cloud Computer, you need to follow these steps:
  - Wait for a few minutes while the Google Cloud sets up your cloud computer. You will see a terminal window when it is ready.
  ## Step THREE
  <h4>Copy paste the following cammand one by one</h4>
-  1.paste this after complet this paste second 
+1.paste this after complet this paste second 
    
    ```bash
     sudo apt update -y && sudo apt upgrade -y
     sudo apt install wget -y
    ```
-
-  2.Download and install Chrome Remote Desktop 
+2.Download and install Chrome Remote Desktop 
 
    ```bash
     sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
     sudo apt install ./chrome-remote-desktop_current_amd64.deb
    ```
-  
-  3. installing XFCE Desktop Environment
+3. installing XFCE Desktop Environment
   
      
     sudo DEBIAN_FRONTEND=noninteractive \
     apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
      
-  4. Activating Chrome Remote Desktop
+4. Activating Chrome Remote Desktop
    ```bash
     sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
    ```
-  5.  Disabling lightdm.service
+5.  Disabling lightdm.service
    ```bash  
     sudo systemctl disable lightdm.service
    ```
-  ## Step Four 
+## Step Four 
   
  - Enjoy your cloud computer! You can install and run any Linux software you want. You can also access the graphical user interface by clicking on the “Desktop” button.
 
