@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height=""><br>
+<img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/rdp2-removebg-preview.png" height=""><br>
 🌟 Free Cloud Linxie RDP🚀
 </p>
 
