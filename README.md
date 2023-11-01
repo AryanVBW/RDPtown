@@ -46,9 +46,9 @@ To use Gmail Cloud Computer, you need to follow these steps:
 <h4>Open gogogle cloud app on your iphone or Android<h4> 
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="">
-  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" height="210">
+  <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Ccloud-shell.png" height="210">
   <p style="text-align: center;"> 📲Click the terminal/shell icon</p>
 </div>
 
