@@ -79,11 +79,9 @@ To use Gmail Cloud Computer, you need to follow these steps:
    ```
 5.  Disabling lightdm.service
   
-      ``bash
-    
-        sudo systemctl disable lightdm.service
-    
-      ```
+   ```bash 
+     sudo systemctl disable lightdm.service
+   ```
 ## Step FOUR
    - Download Chrome Remote Desktop app/Extension or Go to <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> 
 <p align="center">
