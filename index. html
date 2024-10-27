@@ -148,9 +148,11 @@ sudo apt install ./chrome-remote-desktop_current_amd64.deb -y</code></pre>
         <p>Please use RDPTown responsibly and abide by Google's terms of service. Any unauthorized or illegal activities are not supported and are solely the user's responsibility.</p>
         <p>Join in, contribute, raise issues, and let's make RDPTown even better! 🚧✨</p>
     </section>
-    <footer>
-        <p>Made 🕸️ By <a href="https://aryanvbw.github.io/">*Vivek W*</a></p>
-        <p style="font-size: 8px">v1.0</p>
-    </footer>
+<footer style="text-align: center; padding: 20px; background-color: #333; color: #fff;">
+    <p style="margin: 0;">Made 🕸️ by <a href="https://aryanvbw.github.io/" style="color: #007bff; text-decoration: none;">Vivek W</a></p>
+    <p style="font-size: 12px; margin: 5px 0 0; color: #ccc;">Version 1.0</p>
+    <p style="font-size: 10px; margin-top: 10px; color: #ccc;">&copy; 2024 RDPtown. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
