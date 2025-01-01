@@ -73,7 +73,7 @@ sudo apt install wget -y
 Download the Chrome Remote Desktop package and install it using `apt`.
 
 ```bash
-sudo wget [https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb](https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb)
+sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
 ```
 
