@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDPtown - Free Cloud Linux RDP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #ea4335;
+            --text-color: #e8eaed;
+            --light-bg: #202124;
+            --dark-bg: #171717;
+            --card-bg: #2d2e30;
+            --border-color: #3c4043;
+            --bg-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234285f4' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: var(--bg-pattern);
+            opacity: 0.5;
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(23, 23, 23, 0.95) 0%,
+                rgba(32, 33, 36, 0.95) 100%
+            );
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, 
+                rgba(23, 23, 23, 0.95) 0%,
+                rgba(32, 33, 36, 0.95) 100%
+            );
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .logo-container {
+            max-width: 300px;
+            margin: 0 auto 1.5rem;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(66, 133, 244, 0.3));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(45, 46, 48, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(60, 64, 67, 0.3);
+            margin-top: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background: rgba(66, 133, 244, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+            padding: 0 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            background: rgba(45, 46, 48, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(60, 64, 67, 0.3);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            background: rgba(45, 46, 48, 0.9);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+        }
+
+        /* Steps Section */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .step-card {
+            background: rgba(45, 46, 48, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(60, 64, 67, 0.3);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+        }
+
+        /* Code Blocks */
+        .command-block {
+            background: rgba(23, 23, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border: 1px solid rgba(60, 64, 67, 0.3);
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .copy-button:hover {
+            background: #5c95f5;
+            transform: translateY(-2px);
+        }
+
+        .copy-button.copied {
+            background: var(--secondary-color);
+        }
+
+        .copy-button i {
+            font-size: 1rem;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            padding-right: 4rem;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+
+        /* App Store Buttons */
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .store-button {
+            transition: transform 0.3s;
+            filter: drop-shadow(0 0 5px rgba(66, 133, 244, 0.3));
+            max-width: 180px;
+            width: 100%;
+        }
+
+        .store-button img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .store-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Screenshots */
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .screenshot-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            border: 1px solid var(--border-color);
+            object-fit: contain;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .step-description {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, 
+                rgba(23, 23, 23, 0.95) 0%,
+                rgba(32, 33, 36, 0.95) 100%
+            );
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(60, 64, 67, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            background: rgba(66, 133, 244, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card-bg);
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: left;
+                padding: 1rem;
+                border-radius: 5px;
+            }
+
+            .nav-links a:hover {
+                background: rgba(66, 133, 244, 0.1);
+            }
+
+            .logo-container {
+                max-width: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .logo {
+                max-width: 150px;
+            }
+
+            .store-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .screenshots {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-step {
+                margin-bottom: 2rem;
+            }
+
+            .step-description {
+                font-size: 1rem;
+            }
+
+            .features-grid,
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card,
+            .step-card {
+                padding: 1.5rem;
+            }
+
+            body::before {
+                background-size: 40px 40px;
+            }
+
+            .feature-card, .step-card {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo-container {
+                max-width: 150px;
+            }
+
+            .logo {
+                max-width: 120px;
+            }
+
+            .mobile-menu-toggle {
+                padding: 0.3rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .feature-icon {
+                font-size: 1.5rem;
+            }
+
+            .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Additional Dark Theme Styles */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5c95f5;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        ul, ol {
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        .warning-box {
+            background: rgba(234, 67, 53, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+
+        /* Screenshot Steps */
+        .screenshot-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .feature-list i {
+            color: var(--primary-color);
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(23, 23, 23, 0.95) 0%,
+                rgba(32, 33, 36, 0.95) 100%
+            );
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary-color);
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 101;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card-bg);
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: left;
+                padding: 1rem;
+                border-radius: 5px;
+            }
+
+            .nav-links a:hover {
+                background: rgba(66, 133, 244, 0.1);
+            }
+
+            .logo-container {
+                max-width: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .logo {
+                max-width: 150px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card, .step-card {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .command-block {
+                padding: 1rem;
+            }
+
+            .copy-button {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.7rem;
+            }
+
+            pre {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            .feature-icon {
+                font-size: 1.5rem;
+            }
+
+            .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5c95f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading RDPtown...</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/rdp2-removebg-preview.png" alt="RDPtown Logo" class="logo">
+            </div>
+            <div class="header-content">
+                <h1>🌟 Free Cloud Linux RDP 🚀</h1>
+                <p>Your gateway to a powerful, free Linux remote desktop experience</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-to-use">How to Use</a>
+                <a href="#commands">Commands</a>
+                <a href="#download">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="features">
+            <h2 class="section-title">✨ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>⚡️ 400MB/ps internet speed for seamless performance</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Secure & Reliable</h3>
+                    <p>🛡️ Hosted and maintained by Google for maximum security</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-memory feature-icon"></i>
+                    <h3>Powerful RAM</h3>
+                    <p>🖥️ 4GB RAM (16GB for older Gmail accounts!)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-laptop feature-icon"></i>
+                    <h3>Cross-Platform</h3>
+                    <p>Access from any device with an RDP client</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <h2 class="section-title">🎯 Benefits</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-code feature-icon"></i>
+                    <h3>Development</h3>
+                    <p>Develop and test software in a cloud environment</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gamepad feature-icon"></i>
+                    <h3>Gaming</h3>
+                    <p>Play Linux games without local installation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools feature-icon"></i>
+                    <h3>Linux Tools</h3>
+                    <p>Access powerful Linux tools on any device</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cloud feature-icon"></i>
+                    <h3>Cloud Lab</h3>
+                    <p>Your personal cloud computing environment</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation">
+            <h2 class="section-title">🚀 Installation Guide</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Get Google Cloud</h3>
+                    <p>Download Google Cloud app or visit shell.cloud.google.com</p>
+                    <div class="store-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole" class="store-button">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Google Play Store">
+                        </a>
+                        <a href="https://apps.apple.com/us/app/google-cloud/id1005120814" class="store-button">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="60" alt="Apple App Store">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Setup Cloud Shell</h3>
+                    <p>Open Google Cloud app and click the terminal/shell icon</p>
+                    <div class="screenshots">
+                        <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/CRDPcloud.png" alt="Cloud Shell" class="screenshot">
+                        <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cshell.png" alt="Shell" class="screenshot">
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Install RDP</h3>
+                    <p>Run these commands in your cloud shell:</p>
+                    <div class="command-block">
+                        <button class="copy-button" onclick="copyCode(this, 'install-commands')">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                        <pre id="install-commands"><code>sudo apt update -y && sudo apt upgrade -y
+sudo apt install wget -y
+sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
+sudo DEBIAN_FRONTEND=noninteractive apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+sudo systemctl disable lightdm.service</code></pre>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Get Chrome Remote Desktop</h3>
+                    <p>Download the Chrome Remote Desktop app</p>
+                    <div class="store-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.google.chromeremotedesktop" class="store-button">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Google Play Store">
+                        </a>
+                        <a href="https://apps.apple.com/us/app/chrome-remote-desktop/id944025852" class="store-button">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/appstore.png" height="60" alt="Apple App Store">
+                        </a>
+                        <a href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai" class="store-button">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S%24/mediumCrome-withouborder.png" height="60" alt="Chrome Web Store">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>Setup Chrome Remote Desktop</h3>
+                    <p>Follow these steps to connect to your cloud computer:</p>
+                    <div class="screenshots">
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark1.png" alt="Step 1: Open Chrome Remote Desktop" class="screenshot">
+                            <p class="step-description">1. Open Chrome Remote Desktop app</p>
+                        </div>
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark2.png" alt="Step 2: Click Get Started" class="screenshot">
+                            <p class="step-description">2. Click "Get Started"</p>
+                        </div>
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark3.png" alt="Step 3: Enable Remote Access" class="screenshot">
+                            <p class="step-description">3. Enable Remote Access</p>
+                        </div>
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark4.png" alt="Step 4: Set PIN" class="screenshot">
+                            <p class="step-description">4. Set a secure PIN</p>
+                        </div>
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark5.png" alt="Step 5: Connect" class="screenshot">
+                            <p class="step-description">5. Connect to your computer</p>
+                        </div>
+                        <div class="screenshot-step">
+                            <img src="https://github.com/AryanVBW/RDPtown/releases/download/S1/Cdark6.png" alt="Step 6: Access Desktop" class="screenshot">
+                            <p class="step-description">6. Access your Linux desktop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>Enjoy Your Cloud Computer</h3>
+                    <p>You now have access to a powerful Linux environment! You can:</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Install and run Linux applications</li>
+                        <li><i class="fas fa-check-circle"></i> Develop and test software</li>
+                        <li><i class="fas fa-check-circle"></i> Run Linux games and tools</li>
+                        <li><i class="fas fa-check-circle"></i> Access your files from anywhere</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="support">
+            <h2 class="section-title">💡 Support & Resources</h2>
+            <div class="feature-card">
+                <h3>Need Help?</h3>
+                <p>If you encounter any issues during installation or usage, please:</p>
+                <ul style="list-style-position: inside; margin: 1rem 0;">
+                    <li>Check our troubleshooting guide</li>
+                    <li>Join our community forum</li>
+                    <li>Submit an issue on GitHub</li>
+                </ul>
+            </div>
+            <div class="warning-box">
+                <h3>⚠️ Disclaimer</h3>
+                <p>Please use RDPTown responsibly and abide by Google's terms of service. Any unauthorized or illegal activities are not supported and are solely the user's responsibility.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ by <a href="https://aryanvbw.github.io/">Vivek W</a></p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">v1.0 | © 2024 RDPtown</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic scaling and responsive behavior
+        function updateLayout() {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const root = document.documentElement;
+            
+            // Calculate base font size based on viewport
+            const baseFontSize = Math.min(viewportWidth / 100, viewportHeight / 50);
+            root.style.fontSize = `${baseFontSize}px`;
+
+            // Adjust container width based on viewport
+            const container = document.querySelector('.container');
+            if (container) {
+                if (viewportWidth < 768) {
+                    container.style.maxWidth = '100%';
+                    container.style.padding = '0 1rem';
+                } else if (viewportWidth < 1200) {
+                    container.style.maxWidth = '90%';
+                } else {
+                    container.style.maxWidth = '1200px';
+                }
+            }
+
+            // Adjust grid layouts
+            const featuresGrid = document.querySelector('.features-grid');
+            const stepsContainer = document.querySelector('.steps-container');
+            
+            if (featuresGrid) {
+                if (viewportWidth < 480) {
+                    featuresGrid.style.gridTemplateColumns = '1fr';
+                } else if (viewportWidth < 768) {
+                    featuresGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                } else {
+                    featuresGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(280px, 1fr))';
+                }
+            }
+
+            if (stepsContainer) {
+                if (viewportWidth < 480) {
+                    stepsContainer.style.gridTemplateColumns = '1fr';
+                } else if (viewportWidth < 768) {
+                    stepsContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                } else {
+                    stepsContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+                }
+            }
+
+            // Adjust image sizes
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (viewportWidth < 480) {
+                    img.style.maxWidth = '100%';
+                } else {
+                    img.style.maxWidth = 'auto';
+                }
+            });
+
+            // Adjust navigation
+            const nav = document.querySelector('nav');
+            if (nav) {
+                if (viewportWidth < 768) {
+                    nav.style.padding = '0.5rem 0';
+                } else {
+                    nav.style.padding = '1rem 0';
+                }
+            }
+
+            // Adjust section padding
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (viewportWidth < 480) {
+                    section.style.padding = '1.5rem 0';
+                } else if (viewportWidth < 768) {
+                    section.style.padding = '2rem 0';
+                } else {
+                    section.style.padding = '4rem 0';
+                }
+            });
+
+            // Adjust card padding
+            const cards = document.querySelectorAll('.feature-card, .step-card');
+            cards.forEach(card => {
+                if (viewportWidth < 480) {
+                    card.style.padding = '1rem';
+                } else if (viewportWidth < 768) {
+                    card.style.padding = '1.5rem';
+                } else {
+                    card.style.padding = '2rem';
+                }
+            });
+        }
+
+        // Initialize and update on resize
+        window.addEventListener('load', updateLayout);
+        window.addEventListener('resize', updateLayout);
+        window.addEventListener('orientationchange', updateLayout);
+
+        // Loading screen script
+        window.addEventListener('load', function() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.style.opacity = '1';
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Copy code functionality
+        function copyCode(button, codeId) {
+            const codeElement = document.getElementById(codeId);
+            const code = codeElement.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.querySelector('span').textContent;
+                button.classList.add('copied');
+                button.querySelector('span').textContent = 'Copied!';
+                button.querySelector('i').className = 'fas fa-check';
+                
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.querySelector('span').textContent = originalText;
+                    button.querySelector('i').className = 'fas fa-copy';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+                button.querySelector('span').textContent = 'Failed to copy';
+                setTimeout(() => {
+                    button.querySelector('span').textContent = 'Copy';
+                }, 2000);
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
