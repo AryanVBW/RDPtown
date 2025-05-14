@@ -1280,6 +1280,88 @@
             scroll-behavior: smooth;
             scroll-padding-top: 70px;
         }
+        .cloud-shell-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7em;
+            padding: 0.8em 1.6em;
+            background: linear-gradient(90deg, #4285f4 0%, #34a853 100%);
+            border-radius: 10px;
+            font-weight: 700;
+            color: #fff !important;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(66,133,244,0.13);
+            margin: 0.9em 0 1.3em 0;
+            font-size: 1.13em;
+            border: 1.5px solid #4285f4;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+        }
+        .cloud-shell-btn:hover {
+            background: linear-gradient(90deg, #5c95f5 0%, #4ed164 100%);
+            box-shadow: 0 8px 32px rgba(66,133,244,0.18);
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .cloud-shell-btn img {
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(66,133,244,0.10);
+            padding: 2px;
+        }
+        .cloud-shell-btn .external-link {
+            font-size: 1.1em;
+            margin-left: 0.3em;
+            opacity: 0.85;
+        }
+        .cloud-shell-btn.dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7em;
+            padding: 0.8em 1.6em;
+            background: linear-gradient(90deg, #23263a 0%, #1a1c2b 100%);
+            border-radius: 14px;
+            font-weight: 700;
+            color: #fff !important;
+            text-decoration: none;
+            box-shadow: 0 4px 24px rgba(66,133,244,0.13), 0 0 0 2px #4285f4;
+            margin: 0.9em 0 1.3em 0;
+            font-size: 1.13em;
+            border: 1.5px solid #4285f4;
+            transition: 
+                background 0.2s, 
+                box-shadow 0.2s, 
+                border-color 0.2s, 
+                transform 0.18s;
+            position: relative;
+        }
+        .cloud-shell-btn.dark:hover {
+            background: linear-gradient(90deg, #2d3148 0%, #234d36 100%);
+            box-shadow: 0 8px 32px #34a85344, 0 0 0 3px #34a853;
+            border-color: #34a853;
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .cloud-shell-btn .cloud-shell-logo-bg {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2px 6px 2px 2px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(66,133,244,0.10);
+        }
+        .cloud-shell-btn .cloud-shell-logo-bg img {
+            width: 28px;
+            height: 28px;
+            display: block;
+        }
+        .cloud-shell-btn .external-link {
+            font-size: 1.1em;
+            margin-left: 0.3em;
+            opacity: 0.85;
+        }
     </style>
 </head>
 <body>
@@ -1365,8 +1447,16 @@
             <div class="steps-container">
                 <div class="step-card">
                     <div class="step-number">1</div>
+                    <img src="/RDPTown/google_cloud.png" alt="Google Cloud Logo" style="width:80px;display:block;margin:0 auto 1rem auto;">
                     <h3>Get Google Cloud</h3>
-                    <p>Download Google Cloud app or visit shell.cloud.google.com</p>
+                    <p>Download Google Cloud app or visit</p>
+                    <a href="https://shell.cloud.google.com" target="_blank" rel="noopener" class="cloud-shell-btn dark">
+                        <span class="cloud-shell-logo-bg">
+                            <img src="/RDPTown/google_cloud.png" alt="Cloud Shell Logo">
+                        </span>
+                        shell.cloud.google.com
+                        <span class="external-link"><i class="fas fa-external-link-alt"></i></span>
+                    </a>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole" class="store-button">
                             <img src="https://github.com/AryanVBW/RDPtown/releases/download/l1/playstore.png" height="60" alt="Google Play Store">
